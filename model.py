@@ -5,9 +5,9 @@ app = Flask(__name__)
 
 @app.route("/predict")
 def predict():
-    # Simple AI model: calculate mean
-    result = float(np.mean([10, 20, 30, 40]))
-    return jsonify({"AI Model Output": result})
+    # Feature1 change: calculate SUM instead of mean
+    result = float(np.sum([10, 20, 30, 40]))
+    return jsonify({"AI Feature1 Output": result})
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5000)
